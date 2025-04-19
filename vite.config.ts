@@ -13,6 +13,7 @@ export default defineConfig(() => {
     server: {
       host: '0.0.0.0', // Required for Render to expose your server
       port, // Uses PORT from Render or 10001 locally
+      allowedHosts: ['hathor-bot.onrender.com']
     },
   };
 });
