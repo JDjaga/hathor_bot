@@ -9,11 +9,30 @@ export default defineConfig(() => {
     plugins: [react()],
     optimizeDeps: {
       exclude: ['lucide-react'],
+      esbuildOptions: {
+        target: 'esnext',
+        platform: 'browser',
+        supported: {
+          'top-level-await': true
+        }
+      }
     },
     server: {
       host: '0.0.0.0', // Required for Render to expose your server
       port, // Uses PORT from Render or 10001 locally
-      allowedHosts: ['hathor-bot.onrender.com']
+      allowedHosts: ['hathor-bot.onrender.com'],
+      hmr: {
+        timeout: 5000
+      }
     },
+    build: {
+      target: 'esnext',
+      sourcemap: true,
+      rollupOptions: {
+        output: {
+          manualChunks: undefined
+        }
+      }
+    }
   };
 });
