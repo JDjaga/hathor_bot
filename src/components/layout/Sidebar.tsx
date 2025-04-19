@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { LayoutDashboard, Store, Ticket, Wallet, Settings, Gem, ChevronLeft, ChevronRight } from 'lucide-react';
+import { LayoutDashboard, Store, Ticket, Wallet, Settings, Gem, ChevronLeft, ChevronRight, BarChart } from 'lucide-react';
 
 const Sidebar = () => {
   const location = useLocation();
@@ -11,6 +11,7 @@ const Sidebar = () => {
     { path: '/', icon: <LayoutDashboard size={20} />, label: 'Dashboard' },
     { path: '/marketplace', icon: <Store size={20} />, label: 'Marketplace' },
     { path: '/tickets', icon: <Ticket size={20} />, label: 'My Tickets' },
+    { path: '/visualization', icon: <BarChart size={20} />, label: 'Visualization' },
     { path: '/wallet', icon: <Wallet size={20} />, label: 'Wallet' },
     { path: '/settings', icon: <Settings size={20} />, label: 'Settings' },
   ];

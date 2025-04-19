@@ -7,6 +7,7 @@ import WalletVerification from '../pages/WalletVerification';
 import WalletDashboard from '../pages/WalletDashboard';
 import Settings from '../pages/Settings';
 import NotFound from '../pages/NotFound';
+import Visualization from '../pages/Visualization';
 
 const AppRoutes = () => {
   const location = useLocation();
@@ -16,6 +17,7 @@ const AppRoutes = () => {
       <Route path="/" element={<Dashboard />} />
       <Route path="/marketplace" element={<Marketplace />} />
       <Route path="/tickets" element={<MyTickets />} />
+      <Route path="/visualization" element={<Visualization />} />
       <Route path="/wallet" element={<WalletConnect />} />
       <Route path="/wallet/verify/:walletType" element={<WalletVerification />} />
       <Route path="/wallet/dashboard" element={<WalletDashboard />} />
