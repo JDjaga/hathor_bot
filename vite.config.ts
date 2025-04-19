@@ -10,7 +10,7 @@ export default defineConfig(() => {
     optimizeDeps: {
       exclude: ['lucide-react'],
       esbuildOptions: {
-        target: 'esnext',
+        target: 'es2020',
         platform: 'browser',
         supported: {
           'top-level-await': true
@@ -18,21 +18,26 @@ export default defineConfig(() => {
       }
     },
     server: {
-      host: '0.0.0.0', // Required for Render to expose your server
-      port, // Uses PORT from Render or 10001 locally
+      host: '0.0.0.0',
+      port,
       allowedHosts: ['hathor-bot.onrender.com'],
       hmr: {
         timeout: 5000
       }
     },
     build: {
-      target: 'esnext',
+      target: 'es2020',
       sourcemap: true,
+      chunkSizeWarningLimit: 1000,
       rollupOptions: {
         output: {
           manualChunks: undefined
         }
       }
+    },
+    preview: {
+      port,
+      host: '0.0.0.0'
     }
   };
 });
