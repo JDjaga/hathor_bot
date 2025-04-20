@@ -16,7 +16,14 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+<<<<<<< HEAD
     "noFallthroughCasesInSwitch": true
+=======
+    "noFallthroughCasesInSwitch": true,
+
+    /* 👇 Add this line */
+    "types": ["node"]
+>>>>>>> c01c5ea0a2540a294c73f3f81c8bb420bdb8b8d5
   },
   "include": ["vite.config.ts"]
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 
@@ -6,6 +7,14 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
 
   const port = parseInt(env.VITE_PORT || '10001');
+=======
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+// https://vitejs.dev/config/
+export default defineConfig(() => {
+  const port = process.env.PORT ? parseInt(process.env.PORT) : 10001;
+>>>>>>> c01c5ea0a2540a294c73f3f81c8bb420bdb8b8d5
 
   return {
     plugins: [react()],
