@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { useState } from 'react';
-=======
-import { useState } from 'react'; 
->>>>>>> c01c5ea0a2540a294c73f3f81c8bb420bdb8b8d5
 import { motion } from 'framer-motion';
 import { useNFTs } from '../context/NFTContext';
 import NFTCard from '../components/ui/NFTCard';
@@ -92,16 +88,7 @@ const Dashboard = () => {
               animate="visible"
             >
               {nfts.filter(nft => nft.owner === 'user').map((nft) => (
-<<<<<<< HEAD
                 <motion.div key={nft.id} variants={itemVariants}>
-=======
-                <motion.div
-                  key={nft.id}
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.03 }}
-                  className="transition-all duration-300 transform hover:shadow-xl rounded-xl"
-                >
->>>>>>> c01c5ea0a2540a294c73f3f81c8bb420bdb8b8d5
                   <NFTCard nft={nft} showModel={true} />
                 </motion.div>
               ))}
@@ -117,12 +104,7 @@ const Dashboard = () => {
                 <motion.div 
                   key={nft.id}
                   variants={itemVariants} 
-<<<<<<< HEAD
                   className="flex items-center bg-gray-50 dark:bg-gray-700 rounded-lg p-4"
-=======
-                  whileHover={{ scale: 1.02 }}
-                  className="flex items-center bg-gray-50 dark:bg-gray-700 rounded-lg p-4 transition-all duration-300 transform hover:shadow-xl"
->>>>>>> c01c5ea0a2540a294c73f3f81c8bb420bdb8b8d5
                 >
                   <img src={nft.image} alt={nft.name} className="w-16 h-16 rounded-lg object-cover" />
                   <div className="ml-4 flex-1">
@@ -161,16 +143,7 @@ const Dashboard = () => {
             animate="visible"
           >
             {tickets.filter(ticket => ticket.owner === 'user').map((ticket) => (
-<<<<<<< HEAD
               <motion.div key={ticket.id} variants={itemVariants}>
-=======
-              <motion.div
-                key={ticket.id}
-                variants={itemVariants}
-                whileHover={{ scale: 1.03 }}
-                className="transition-all duration-300 transform hover:shadow-xl rounded-xl"
-              >
->>>>>>> c01c5ea0a2540a294c73f3f81c8bb420bdb8b8d5
                 <NFTCard nft={ticket} />
               </motion.div>
             ))}
@@ -181,8 +154,4 @@ const Dashboard = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Dashboard;
-=======
-export default Dashboard;
->>>>>>> c01c5ea0a2540a294c73f3f81c8bb420bdb8b8d5

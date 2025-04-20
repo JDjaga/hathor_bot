@@ -13,11 +13,7 @@ const walletOptions = [
   },
   {
     id: 'walletconnect',
-<<<<<<< HEAD
-    name: 'WalletConnect',
-=======
     name: 'HatherNetwork',
->>>>>>> c01c5ea0a2540a294c73f3f81c8bb420bdb8b8d5
     icon: '🔗',
     color: 'from-blue-500 to-purple-500',
   },

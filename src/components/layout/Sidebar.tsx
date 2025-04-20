@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { 
   LayoutDashboard, 
   Store, 
@@ -16,9 +15,6 @@ import {
   Vote,
   BarChart 
 } from 'lucide-react';
-=======
-import { LayoutDashboard, Store, Ticket, Wallet, Settings, Gem, ChevronLeft, ChevronRight, BarChart } from 'lucide-react';
->>>>>>> c01c5ea0a2540a294c73f3f81c8bb420bdb8b8d5
 
 const Sidebar = () => {
   const location = useLocation();
@@ -28,7 +24,6 @@ const Sidebar = () => {
     { path: '/', icon: <LayoutDashboard size={20} />, label: 'Dashboard' },
     { path: '/marketplace', icon: <Store size={20} />, label: 'Marketplace' },
     { path: '/tickets', icon: <Ticket size={20} />, label: 'My Tickets' },
-<<<<<<< HEAD
     { path: '/wallet', icon: <Wallet size={20} />, label: 'Wallet' },
     { path: '/visualization', icon: <BarChart size={20} />, label: 'Visualization' },
     { 
@@ -38,10 +33,14 @@ const Sidebar = () => {
       badge: 'New'
     },
     { 
-      path: '/gaming', 
+      path: '/web3/client', 
       icon: <Gamepad2 size={20} />, 
       label: 'Gaming',
-      badge: 'New'
+      badge: 'New',
+      onClick: () => {
+        window.location.href = '/web3/client';
+        return false;
+      }
     },
     { 
       path: '/governance', 
@@ -49,10 +48,6 @@ const Sidebar = () => {
       label: 'Governance',
       badge: 'New'
     },
-=======
-    { path: '/visualization', icon: <BarChart size={20} />, label: 'Visualization' },
-    { path: '/wallet', icon: <Wallet size={20} />, label: 'Wallet' },
->>>>>>> c01c5ea0a2540a294c73f3f81c8bb420bdb8b8d5
     { path: '/settings', icon: <Settings size={20} />, label: 'Settings' },
   ];
 
@@ -109,7 +104,6 @@ const Sidebar = () => {
                 >
                   <span className="text-current">{item.icon}</span>
                   {!collapsed && (
-<<<<<<< HEAD
                     <motion.div className="flex items-center justify-between flex-1">
                       <span className="ml-4 font-medium">{item.label}</span>
                       {item.badge && (
@@ -118,16 +112,6 @@ const Sidebar = () => {
                         </span>
                       )}
                     </motion.div>
-=======
-                    <motion.span
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      className="ml-4 font-medium"
-                    >
-                      {item.label}
-                    </motion.span>
->>>>>>> c01c5ea0a2540a294c73f3f81c8bb420bdb8b8d5
                   )}
                   {!collapsed && location.pathname === item.path && (
                     <motion.div

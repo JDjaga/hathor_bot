@@ -6,10 +6,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import { WalletProvider } from './context/WalletContext';
 import { NFTProvider } from './context/NFTContext';
 
-<<<<<<< HEAD
-=======
 
->>>>>>> c01c5ea0a2540a294c73f3f81c8bb420bdb8b8d5
 function App() {
   return (
     <ThemeProvider>
